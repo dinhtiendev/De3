@@ -1,0 +1,25 @@
+﻿@using Q3.Models
+@model List<Employee>
+
+<h1>List of employees</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Sex</th>
+		<th>Position</th>
+		<th>Action</th>
+	</tr>
+	
+		@foreach (Employee employee in Model)
+	   {
+		   <tr>
+		    <td>@employee.Name</td>
+			<td>@employee.Sex</td>
+			<td>@employee.Position</td>
+			<td><a href="/Employee/Delete/@employee.Id">Delete</a></td>
+			</tr>
+	   }
+		
+	
+</table>
